@@ -20,6 +20,11 @@ export const store = new Vuex.Store({
                 .catch(err => {
                     console.log(err)
                 })
+        },
+        
+        clearData ({ commit }) {
+            commit('setCurrentUser', null)
+            commit('setUserProfile', {})
         }
     },
 
